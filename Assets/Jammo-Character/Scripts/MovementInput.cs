@@ -84,7 +84,7 @@ public class MovementInput : MonoBehaviour {
 			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (desiredMoveDirection), desiredRotationSpeed);
             controller.Move(desiredMoveDirection * Time.deltaTime * Velocity);
 		}
-		CheckforEncounters();
+		
 	}
 
     public void LookAt(Vector3 pos)
@@ -125,14 +125,5 @@ public class MovementInput : MonoBehaviour {
 		}
 	}
 
-	private void CheckforEncounters()
-    {
-        if (Physics.OverlapBox(transform.position, 0.2f, grassLayer) != null)
-        {
-			if(Random.Range(1,101)<= 10)
-            {
-				Debug.Log("Encounter wild Pokemon");
-            }
-        }
-    }
+	
 }
