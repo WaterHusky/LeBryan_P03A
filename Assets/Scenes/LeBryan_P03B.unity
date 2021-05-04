@@ -379,6 +379,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 92389196}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &111611410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3541754002163558908, guid: bd6ee82c5e06b3f4f86113cbf8261ae1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1847362591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &111611411 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4757836856755875626, guid: bd6ee82c5e06b3f4f86113cbf8261ae1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1847362591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111611410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa9f165e2b4f1a4f9522501717c095d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &111611413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111611410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb0686eb598d043a19bd345eea00b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemons:
+  - _base: {fileID: 11400000, guid: ac6ec4b81216af2418971192fb9d71da, type: 2}
+    level: 7
+  - _base: {fileID: 11400000, guid: b8ea5c1e830fe1e45b82802f406db517, type: 2}
+    level: 3
 --- !u!1 &165376471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,7 +2334,6 @@ GameObject:
   m_Component:
   - component: {fileID: 791347589}
   - component: {fileID: 791347587}
-  - component: {fileID: 791347588}
   m_Layer: 0
   m_Name: Battle Camera
   m_TagString: Untagged
@@ -2350,14 +2384,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &791347588
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791347586}
-  m_Enabled: 1
 --- !u!4 &791347589
 Transform:
   m_ObjectHideFlags: 0
@@ -3014,7 +3040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3096,7 +3122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &968187401
 Transform:
   m_ObjectHideFlags: 0
@@ -4237,9 +4263,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153699e50ba109d4a8b25d45694dac6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _base: {fileID: 11400000, guid: b8ea5c1e830fe1e45b82802f406db517, type: 2}
-  level: 5
   isPlayerUnit: 0
+--- !u!1 &1223029771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223029773}
+  - component: {fileID: 1223029772}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1223029772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223029771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e8cf669d3034f43bb306cdd73bb50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 111611411}
+  battleSystem: {fileID: 968187402}
+  worldcamera: {fileID: 963194227}
+--- !u!4 &1223029773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223029771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.814381, y: 19.231472, z: 106.063126}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1251194103
 GameObject:
   m_ObjectHideFlags: 0
@@ -4817,6 +4887,7 @@ GameObject:
   - component: {fileID: 1559006880}
   - component: {fileID: 1559006879}
   - component: {fileID: 1559006878}
+  - component: {fileID: 1559006882}
   m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
@@ -4899,6 +4970,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559006882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559006877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5f2757d7e38f4478f0b52aff0b6f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wildPokemons:
+  - _base: {fileID: 11400000, guid: b8ea5c1e830fe1e45b82802f406db517, type: 2}
+    level: 5
+  - _base: {fileID: 11400000, guid: b8ea5c1e830fe1e45b82802f406db517, type: 2}
+    level: 7
 --- !u!1 &1574435324
 GameObject:
   m_ObjectHideFlags: 0
@@ -5554,8 +5642,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 14.620003, y: 0.0000667572}
-  m_SizeDelta: {x: -37.919113, y: 12.745037}
+  m_AnchoredPosition: {x: 8.3066, y: 0.0000667572}
+  m_SizeDelta: {x: -25.292389, y: 12.745037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1745869946
 MonoBehaviour:
@@ -5811,7 +5899,7 @@ PrefabInstance:
     - target: {fileID: 4757836856755875626, guid: bd6ee82c5e06b3f4f86113cbf8261ae1,
         type: 3}
       propertyPath: desiredRotationSpeed
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4757836856755875626, guid: bd6ee82c5e06b3f4f86113cbf8261ae1,
         type: 3}
@@ -5822,6 +5910,16 @@ PrefabInstance:
         type: 3}
       propertyPath: allowPlayerRotation
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757836856755875626, guid: bd6ee82c5e06b3f4f86113cbf8261ae1,
+        type: 3}
+      propertyPath: Velocity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757836856755875626, guid: bd6ee82c5e06b3f4f86113cbf8261ae1,
+        type: 3}
+      propertyPath: Speed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7635726066119915157, guid: bd6ee82c5e06b3f4f86113cbf8261ae1,
         type: 3}
@@ -6338,8 +6436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153699e50ba109d4a8b25d45694dac6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _base: {fileID: 11400000, guid: ac6ec4b81216af2418971192fb9d71da, type: 2}
-  level: 7
   isPlayerUnit: 1
 --- !u!1001 &1950143710
 PrefabInstance:

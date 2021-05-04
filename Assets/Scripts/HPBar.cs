@@ -11,6 +11,7 @@ public class HPBar : MonoBehaviour
     public void SetHP(float hpNormalized)
     {
         health.transform.localScale = new Vector3(hpNormalized, 1f);
+        health.GetComponent<Image>().color = Color.green;
     }
 
     public IEnumerator SetHPSmooth(float newHp)

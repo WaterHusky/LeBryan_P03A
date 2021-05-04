@@ -1,4 +1,4 @@
-
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +25,9 @@ public class MovementInput : MonoBehaviour {
 	public CharacterController controller;
 	public bool isGrounded;
 
-    [Header("Animation Smoothing")]
+	public event Action OnEncountered;
+
+	[Header("Animation Smoothing")]
     [Range(0, 1f)]
     public float HorizontalAnimSmoothTime = 0.2f;
     [Range(0, 1f)]
@@ -48,7 +50,8 @@ public class MovementInput : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public void HandleUpdate() 
+	{
 		InputMagnitude ();
 
         isGrounded = controller.isGrounded;
@@ -63,8 +66,7 @@ public class MovementInput : MonoBehaviour {
         moveVector = new Vector3(0, verticalVel * .2f * Time.deltaTime, 0);
         controller.Move(moveVector);
 
-
-    }
+	}
 
     void PlayerMoveAndRotation() {
 		InputX = Input.GetAxis ("Horizontal");
@@ -127,5 +129,19 @@ public class MovementInput : MonoBehaviour {
 		}
 
 	}
-	
+
+	void OnTriggerEnter(Collider other)
+	{
+		CheckforEncounters();
+	}
+
+
+	public void CheckforEncounters()
+	{
+		if (UnityEngine.Random.Range(1, 101) <= 10)
+		{
+			Velocity = 0;
+			OnEncountered();
+		}
+	}
 }
