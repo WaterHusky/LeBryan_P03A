@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0e5e9a68de66d4c95a6f273715e156, type: 3}
+  m_Name: Pidgey
+  m_EditorClassIdentifier: 
+  name: Pidgey
+  description: 
+  frontSprite: {fileID: 21300000, guid: b1147194dba9fa8448190ced34937183, type: 3}
+  backSprite: {fileID: 21300000, guid: 71c2fa26b32d3fc46bf586ba3e2624eb, type: 3}
+  type1: 1
+  type2: 10
+  maxHP: 40
+  attack: 45
+  defense: 40
+  spAttack: 35
+  spDefense: 35
+  speed: 56
+  learnableMoves:
+  - movebase: {fileID: 11400000, guid: c4305aeadea191f4fafe5b3ebac2d649, type: 2}
+    level: 1

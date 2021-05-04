@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e3fe16344af25444bcd7bedfc12f24f, type: 3}
-  m_Name: Vine Whip
+  m_Name: Sing
   m_EditorClassIdentifier: 
-  name: Vine Whip
+  name: Sing
   description: 
-  type: 5
-  power: 45
+  type: 1
+  power: 0
   accuracy: 100
-  pp: 25
-  category: 1
+  pp: 20
+  category: 2
   effects:
     boosts: []
-    status: 0
+    status: 3
   target: 0
