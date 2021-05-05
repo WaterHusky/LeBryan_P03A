@@ -145,4 +145,5 @@ public class MovementInput : MonoBehaviour {
 			OnEncountered();
 		}
 	}
+
 }

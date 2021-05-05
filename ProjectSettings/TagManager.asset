@@ -16,7 +16,7 @@ TagManager:
   - 
   - 
   - LongGrass
-  - 
+  - Battle
   - 
   - 
   - 
@@ -41,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3597465447
+    locked: 0
+  - name: Foreground
+    uniqueID: 3693698877
+    locked: 0
+  - name: Player
+    uniqueID: 1936486403
+    locked: 0
+  - name: Battle
+    uniqueID: 3246760697
     locked: 0

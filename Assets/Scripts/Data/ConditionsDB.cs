@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConditionDB : MonoBehaviour
+public class ConditionsDB
 {
     public static void Init()
     {
@@ -30,7 +30,7 @@ public class ConditionDB : MonoBehaviour
                 }
             }
         },
-         {
+        {
             ConditionID.brn,
             new Condition()
             {
@@ -43,7 +43,7 @@ public class ConditionDB : MonoBehaviour
                 }
             }
         },
-         {
+        {
             ConditionID.par,
             new Condition()
             {
@@ -51,7 +51,7 @@ public class ConditionDB : MonoBehaviour
                 StartMessage = "has been paralyzed",
                 OnBeforeMove = (Pokemon pokemon) =>
                 {
-                    if (Random.Range(1,5) == 1)
+                    if  (Random.Range(1, 5) == 1)
                     {
                         pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name}'s paralyzed and can't move");
                         return false;
@@ -61,7 +61,7 @@ public class ConditionDB : MonoBehaviour
                 }
             }
         },
-         {
+        {
             ConditionID.frz,
             new Condition()
             {
@@ -69,7 +69,7 @@ public class ConditionDB : MonoBehaviour
                 StartMessage = "has been frozen",
                 OnBeforeMove = (Pokemon pokemon) =>
                 {
-                    if (Random.Range(1,5) == 1)
+                    if  (Random.Range(1, 5) == 1)
                     {
                         pokemon.CureStatus();
                         pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name}'s is not frozen anymore");
@@ -80,7 +80,7 @@ public class ConditionDB : MonoBehaviour
                 }
             }
         },
-         {
+        {
             ConditionID.slp,
             new Condition()
             {
@@ -89,12 +89,12 @@ public class ConditionDB : MonoBehaviour
                 OnStart = (Pokemon pokemon) =>
                 {
                     // Sleep for 1-3 turns
-                    pokemon.StatusTime = Random.Range(1,4);
+                    pokemon.StatusTime = Random.Range(1, 4);
                     Debug.Log($"Will be asleep for {pokemon.StatusTime} moves");
                 },
                 OnBeforeMove = (Pokemon pokemon) =>
                 {
-                    if(pokemon.StatusTime <= 0)
+                    if (pokemon.StatusTime <= 0)
                     {
                         pokemon.CureStatus();
                         pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} woke up!");
@@ -107,9 +107,9 @@ public class ConditionDB : MonoBehaviour
                 }
             }
         },
-         // Volatile Status Conditions
 
-         {
+        // Volatile Status Conditions
+        {
             ConditionID.confusion,
             new Condition()
             {
@@ -117,23 +117,22 @@ public class ConditionDB : MonoBehaviour
                 StartMessage = "has been confused",
                 OnStart = (Pokemon pokemon) =>
                 {
-                    // Sleep for 1-4 turns
-                    pokemon.VolatileStatusTime = Random.Range(1,5);
+                    // Confused for 1 - 4 turns
+                    pokemon.VolatileStatusTime = Random.Range(1, 5);
                     Debug.Log($"Will be confused for {pokemon.VolatileStatusTime} moves");
                 },
                 OnBeforeMove = (Pokemon pokemon) =>
                 {
-                    if(pokemon.VolatileStatusTime <= 0)
+                    if (pokemon.VolatileStatusTime <= 0)
                     {
                         pokemon.CureVolatileStatus();
                         pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} kicked out of confusion!");
                         return true;
                     }
-
                     pokemon.VolatileStatusTime--;
 
                     // 50% chance to do a move
-                    if(Random.Range(1,3) == 1)
+                    if (Random.Range(1, 3) == 1)
                         return true;
 
                     // Hurt by confusion
@@ -145,10 +144,22 @@ public class ConditionDB : MonoBehaviour
             }
         }
     };
+
+    public static float GetStatusBonus(Condition condition)
+    {
+        if (condition == null)
+            return 1f;
+        else if (condition.Id == ConditionID.slp || condition.Id == ConditionID.frz)
+            return 2f;
+        else if (condition.Id == ConditionID.par || condition.Id == ConditionID.psn || condition.Id == ConditionID.brn)
+            return 1.5f;
+
+        return 1f;
+    }
 }
 
 public enum ConditionID
 {
-    none,psn,brn,slp,par,frz,
+    none, psn, brn, slp, par, frz,
     confusion
 }
