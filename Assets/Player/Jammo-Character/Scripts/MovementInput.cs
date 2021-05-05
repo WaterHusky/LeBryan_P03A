@@ -8,9 +8,13 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class MovementInput : MonoBehaviour {
 
-    public float Velocity;
+	[SerializeField] string name;
+	public AudioSource walkGrasssound;
+	public float Velocity;
 	public static MovementInput instance;
 	[Space]
+
+	private Character character;
 
 	public LayerMask LongGrass;
 	public float InputX;
@@ -47,6 +51,7 @@ public class MovementInput : MonoBehaviour {
 		anim = this.GetComponent<Animator> ();
 		cam = Camera.main;
 		controller = this.GetComponent<CharacterController> ();
+		walkGrasssound = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -133,6 +138,7 @@ public class MovementInput : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
+		walkGrasssound.Play();
 		CheckforEncounters();
 	}
 
@@ -142,8 +148,15 @@ public class MovementInput : MonoBehaviour {
 		if (UnityEngine.Random.Range(1, 101) <= 10)
 		{
 			Velocity = 0;
-			OnEncountered();
+			GameController.Instance.StartBattle();
 		}
 	}
+
+	public string Name
+	{
+		get => name;
+	}
+
+	public Character Character => character;
 
 }

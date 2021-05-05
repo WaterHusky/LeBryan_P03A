@@ -9,26 +9,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f0e5e9a68de66d4c95a6f273715e156, type: 3}
+  m_Script: {fileID: 11500000, guid: c5fd68a4b7ad6344ba826f63fe210892, type: 3}
   m_Name: Jigglypuff
   m_EditorClassIdentifier: 
-  name: Jigglypuff
+  name: JigglyPuff
   description: 
   frontSprite: {fileID: 21300000, guid: 660e21013e7ad3242b55e91d265afc3a, type: 3}
   backSprite: {fileID: 21300000, guid: 8c817c6c65c9d8440afc5f82ce1a3e02, type: 3}
   type1: 1
-  type2: 18
-  maxHP: 115
+  type2: 0
+  maxHp: 115
   attack: 45
   defense: 20
   spAttack: 45
   spDefense: 25
   speed: 20
+  expYield: 95
+  growthRate: 0
   catchRate: 170
   learnableMoves:
-  - movebase: {fileID: 11400000, guid: c4305aeadea191f4fafe5b3ebac2d649, type: 2}
+  - moveBase: {fileID: 11400000, guid: c4305aeadea191f4fafe5b3ebac2d649, type: 2}
     level: 1
-  - movebase: {fileID: 11400000, guid: 97ebe356c1042b842b39fee7cc7d62a0, type: 2}
+  - moveBase: {fileID: 11400000, guid: 97ebe356c1042b842b39fee7cc7d62a0, type: 2}
     level: 1
-  - movebase: {fileID: 11400000, guid: c53b3c00079430a49ac51aa85158e9a4, type: 2}
+  - moveBase: {fileID: 11400000, guid: c53b3c00079430a49ac51aa85158e9a4, type: 2}
     level: 10

@@ -244,18 +244,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4975402178090219976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 278e5011ea343c1499d52c10bc0ab49f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c72ee67057e9b84ba3d7fcf2b2e620c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 4975402179150509805}
   levelText: {fileID: 4975402177995978031}
   statusText: {fileID: 8635736878082473943}
   hpBar: {fileID: 4975402179818459817}
-  psnColor: {r: 0.86, g: 0.20572548, b: 0.7925488, a: 1}
-  brnColor: {r: 1, g: 0.43945798, b: 0.2216981, a: 1}
+  expBar: {fileID: 0}
+  psnColor: {r: 1, g: 0, b: 0.908308, a: 1}
+  brnColor: {r: 1, g: 0.5307527, b: 0, a: 1}
   slpColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
-  parColor: {r: 1, g: 0.8833525, b: 0.015686274, a: 1}
-  frzColor: {r: 0.043137252, g: 0.5626236, b: 1, a: 1}
+  parColor: {r: 1, g: 0.8741453, b: 0, a: 1}
+  frzColor: {r: 0.07075471, g: 0.747574, b: 1, a: 1}
 --- !u!1 &4975402178708218459
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,9 +290,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 20.480003, y: 0.0000667572}
-  m_SizeDelta: {x: -24.819351, y: 12.745037}
+  m_SizeDelta: {x: 185.18065, y: 12.745037}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4975402178708218454
 CanvasRenderer:
@@ -441,9 +442,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 8.3066025, y: 0.0000667572}
-  m_SizeDelta: {x: -25.292389, y: 12.745037}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 113.3066, y: 0.0000667572}
+  m_SizeDelta: {x: 184.70761, y: 12.745037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4975402179724179893
 CanvasRenderer:
@@ -519,10 +520,10 @@ RectTransform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 18.22, y: -18.4}
-  m_SizeDelta: {x: -96.44919, y: 18}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 66.444595, y: -18.4}
+  m_SizeDelta: {x: 209.55081, y: 18}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4975402179818459815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -569,39 +570,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4975402179818459819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0177c0ee17c13ba42bbda0b57b50bc0c, type: 3}
+  m_Script: {fileID: 11500000, guid: b58d5a6d34ee6b24b9e5a0c6bf6629bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 4975402178708218459}
-  gradient:
-    serializedVersion: 2
-    key0: {r: 0.9716981, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.9127517, b: 0, a: 1}
-    key2: {r: 0.2444452, g: 1, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 6554
-    ctime1: 32768
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 2
+  health: {fileID: 4975402179818459819}
 --- !u!1 &4975402179863515039
 GameObject:
   m_ObjectHideFlags: 0

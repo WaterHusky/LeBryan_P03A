@@ -135,13 +135,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1827209208747438387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f776a6f57353a0748abb2076409d2577, type: 3}
+  m_Script: {fileID: 11500000, guid: 188a118f66dc9e246b6c38327d07046a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 3726035357501490218}
   levelText: {fileID: 929177781691980458}
   hpBar: {fileID: 3771721517802763825}
-  highlightedColor: {r: 0.24313726, g: 0.5529412, b: 0.9843137, a: 1}
+  highlightedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1973976780807091549
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,39 +381,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5969192309676280235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0177c0ee17c13ba42bbda0b57b50bc0c, type: 3}
+  m_Script: {fileID: 11500000, guid: b58d5a6d34ee6b24b9e5a0c6bf6629bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 6260620994725594601}
-  gradient:
-    serializedVersion: 2
-    key0: {r: 0.9716981, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.9127517, b: 0, a: 1}
-    key2: {r: 0.2444452, g: 1, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 6554
-    ctime1: 32768
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 2
 --- !u!1 &6260620994725594601
 GameObject:
   m_ObjectHideFlags: 0
