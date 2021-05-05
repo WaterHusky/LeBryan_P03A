@@ -32,11 +32,11 @@ public class BattleHud : MonoBehaviour
 
         statusColors = new Dictionary<ConditionID, Color>()
         {
-            {ConditionID.psn, psnColor },
-            {ConditionID.brn, brnColor },
-            {ConditionID.slp, slpColor },
-            {ConditionID.par, parColor },
-            {ConditionID.frz, frzColor },
+            {ConditionID.psn, psnColor},
+            {ConditionID.brn, brnColor},
+            {ConditionID.slp, slpColor},
+            {ConditionID.par, parColor},
+            {ConditionID.frz, frzColor},
         };
 
         SetStatusText();

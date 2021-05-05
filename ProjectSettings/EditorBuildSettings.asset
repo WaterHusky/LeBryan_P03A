@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LeBryan_P03B.unity
+    guid: f33c973682a079d4d9ade55bf874e113
   m_configObjects: {}
