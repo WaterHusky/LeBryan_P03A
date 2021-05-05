@@ -141,7 +141,7 @@ MonoBehaviour:
   nameText: {fileID: 3726035357501490218}
   levelText: {fileID: 929177781691980458}
   hpBar: {fileID: 3771721517802763825}
-  highlightedColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightedColor: {r: 0.023584902, g: 0.023606319, b: 1, a: 1}
 --- !u!1 &1973976780807091549
 GameObject:
   m_ObjectHideFlags: 0

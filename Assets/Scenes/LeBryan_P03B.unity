@@ -1614,18 +1614,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 517393154}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &539472995 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3771721517802763825, guid: 34435f5b213b3fd4a9530f65012143d1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2815161786135125598}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b58d5a6d34ee6b24b9e5a0c6bf6629bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &554891371 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2822554873144784290, guid: 34435f5b213b3fd4a9530f65012143d1,
@@ -2972,7 +2960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791347586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 103.69, z: -106.6}
+  m_LocalPosition: {x: 0, y: 122, z: -106.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 968187401}
@@ -3476,6 +3464,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 848663652}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &877488885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4975402179818459817, guid: f68b3b38dfe96154ba3fd30b94ade942,
+    type: 3}
+  m_PrefabInstance: {fileID: 4975402178247534030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58d5a6d34ee6b24b9e5a0c6bf6629bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &893068597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 461654, guid: ee9f255691f08004fba39ba0765c04e7,
@@ -3892,6 +3892,8 @@ GameObject:
   m_Component:
   - component: {fileID: 968187401}
   - component: {fileID: 968187402}
+  - component: {fileID: 968187403}
+  - component: {fileID: 968187404}
   m_Layer: 0
   m_Name: Battle System
   m_TagString: Untagged
@@ -3933,9 +3935,206 @@ MonoBehaviour:
   partyScreen: {fileID: 1230178123}
   playerImage: {fileID: 0}
   trainerImage: {fileID: 0}
-  pokeballSprite: {fileID: 4836524646726154204, guid: 787cee3748de1f74fa3c43b73c1b2082,
+  pokeballSprite: {fileID: 8621963922592906532, guid: 787cee3748de1f74fa3c43b73c1b2082,
     type: 3}
   moveSelectionUI: {fileID: 0}
+  name: Brendan
+  pokeballthrown: {fileID: 8300000, guid: c240c5d300d23604fae7654bb87b5b82, type: 3}
+  Pokeballthrown: {fileID: 968187403}
+  select: {fileID: 8300000, guid: 756ea322d1242424d88669f3bcb0fcb9, type: 3}
+  Select: {fileID: 968187404}
+--- !u!82 &968187403
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968187400}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &968187404
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968187400}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &978949815
 GameObject:
   m_ObjectHideFlags: 0
@@ -5174,7 +5373,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1369904a5b85eec4db4f11ddfd157fc4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6203,9 +6402,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wildPokemons:
-  - _base: {fileID: 11400000, guid: b8ea5c1e830fe1e45b82802f406db517, type: 2}
+  - _base: {fileID: 11400000, guid: 622405c6224d4cd4cb50f86b02e43177, type: 2}
     level: 5
-  - _base: {fileID: 11400000, guid: 61c5d08fa93413e4ba34f73c8da64c47, type: 2}
+  - _base: {fileID: 11400000, guid: b8ea5c1e830fe1e45b82802f406db517, type: 2}
     level: 7
 --- !u!1001 &1598535317
 PrefabInstance:
@@ -8455,7 +8654,7 @@ PrefabInstance:
         type: 3}
       propertyPath: hpBar
       value: 
-      objectReference: {fileID: 539472995}
+      objectReference: {fileID: 877488885}
     - target: {fileID: 4975402178090219976, guid: f68b3b38dfe96154ba3fd30b94ade942,
         type: 3}
       propertyPath: m_Name

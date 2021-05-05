@@ -19,6 +19,11 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] Image trainerImage;
     [SerializeField] GameObject pokeballSprite;
     [SerializeField] MoveSelectionUI moveSelectionUI;
+    public string name;
+    public AudioClip pokeballthrown;
+    public AudioSource Pokeballthrown;
+    public AudioClip select;
+    public AudioSource Select;
 
     public event Action<bool> OnBattleOver;
 
@@ -40,6 +45,10 @@ public class BattleSystem : MonoBehaviour
     int escapeAttempts;
     MoveBase moveToLearn;
 
+    public string Name
+    {
+        get => name;
+    }
     public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
     {
         this.playerParty = playerParty;
@@ -498,13 +507,25 @@ public class BattleSystem : MonoBehaviour
     void HandleActionSelection()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Select.PlayOneShot(select);
             ++currentAction;
+        }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Select.PlayOneShot(select);
             --currentAction;
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow)) 
+        {
+            Select.PlayOneShot(select);
             currentAction += 2;
+        }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Select.PlayOneShot(select);
             currentAction -= 2;
+        }
 
         currentAction = Mathf.Clamp(currentAction, 0, 3);
 
@@ -539,13 +560,25 @@ public class BattleSystem : MonoBehaviour
     void HandleMoveSelection()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Select.PlayOneShot(select);
             ++currentMove;
+        }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Select.PlayOneShot(select);
             --currentMove;
+        }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Select.PlayOneShot(select);
             currentMove += 2;
+        }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Select.PlayOneShot(select);
             currentMove -= 2;
+        }
 
         currentMove = Mathf.Clamp(currentMove, 0, playerUnit.Pokemon.Moves.Count - 1);
 
@@ -571,13 +604,25 @@ public class BattleSystem : MonoBehaviour
     void HandlePartySelection()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Select.PlayOneShot(select);
             ++currentMember;
+        }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Select.PlayOneShot(select);
             --currentMember;
+        }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Select.PlayOneShot(select);
             currentMember += 2;
+        }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Select.PlayOneShot(select);
             currentMember -= 2;
+        }
 
         currentMember = Mathf.Clamp(currentMember, 0, playerParty.Pokemons.Count - 1);
 
@@ -696,16 +741,11 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator ThrowPokeball()
     {
+        Pokeballthrown.Play();
+
         state = BattleState.Busy;
 
-        if (isTrainerBattle)
-        {
-            yield return dialogBox.TypeDialog($"You can't steal the trainers pokemon!");
-            state = BattleState.RunningTurn;
-            yield break;
-        }
-
-        yield return dialogBox.TypeDialog($"{player.Name} used POKEBALL!");
+        yield return dialogBox.TypeDialog($"{Name} used POKEBALL!");
 
         var pokeballObj = Instantiate(pokeballSprite, playerUnit.transform.position - new Vector3(2, 0), Quaternion.identity);
         var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
@@ -713,7 +753,7 @@ public class BattleSystem : MonoBehaviour
         // Animations
         yield return pokeball.transform.DOJump(enemyUnit.transform.position + new Vector3(0, 2), 2f, 1, 1f).WaitForCompletion();
         yield return enemyUnit.PlayCaptureAnimation();
-        yield return pokeball.transform.DOMoveY(enemyUnit.transform.position.y - 1.3f, 0.5f).WaitForCompletion();
+        yield return pokeball.transform.DOMoveY(enemyUnit.transform.position.y - 1.8f, 0.5f).WaitForCompletion();
 
         int shakeCount = TryToCatchPokemon(enemyUnit.Pokemon);
 

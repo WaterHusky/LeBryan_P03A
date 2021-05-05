@@ -8,7 +8,6 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class MovementInput : MonoBehaviour {
 
-	[SerializeField] string name;
 	public AudioSource walkGrasssound;
 	public float Velocity;
 	public static MovementInput instance;
@@ -150,11 +149,6 @@ public class MovementInput : MonoBehaviour {
 			Velocity = 0;
 			GameController.Instance.StartBattle();
 		}
-	}
-
-	public string Name
-	{
-		get => name;
 	}
 
 	public Character Character => character;
